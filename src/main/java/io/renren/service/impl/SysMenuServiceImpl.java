@@ -62,7 +62,7 @@ public class SysMenuServiceImpl implements SysMenuService {
 
 		//系统管理员，拥有最高权限
 		if(userId == 1){
-			List<SysMenuEntity> menuList = queryList(new HashMap<>());
+			List<SysMenuEntity> menuList = queryList(new HashMap<String,Object>());
 			permsList = new ArrayList<>(menuList.size());
 			for(SysMenuEntity menu : menuList){
 				permsList.add(menu.getPerms());
